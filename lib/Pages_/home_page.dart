@@ -11,6 +11,7 @@ import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
 import '../themes/themeProvider.dart';
+import 'myDrawer.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -21,22 +22,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> allPages = [
-    LiveMatches(),
     UpcomingMatches(),
+    LiveMatches(),
     SettingsPage(),
+
   ];
 
   List<Text> appbar_titles = [
-    Text("L I V E"),
     Text("U P C O M I N G S"),
+    Text("L I V E"),
     Text("S E T T I N G S"),
+    
   ];
 
   int selected_index = 0;
 
   void onTabChange(int index) {
     setState(() {
-      print(selected_index.toString() + " " + index.toString());
+      print(selected_index.toString() + " -> " + index.toString());
       selected_index = index;
     });
   }
@@ -69,6 +72,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      drawer: AppDrawer(),
       body: allPages[selected_index],
       bottomNavigationBar: MyNavBar(
         currentIndex: selected_index,

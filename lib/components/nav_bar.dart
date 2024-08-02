@@ -18,12 +18,12 @@ class MyNavBar extends StatelessWidget {
       onTap: onTap,
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(Icons.people),
-          label: "Squads",
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.calendar_month),
           label: "Upcomings",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.people),
+          label: "Squads",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),

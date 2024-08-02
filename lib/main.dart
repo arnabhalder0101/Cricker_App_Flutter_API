@@ -1,3 +1,4 @@
+import 'package:cricker_app/Pages_/about_us.dart';
 import 'package:cricker_app/Pages_/home_page.dart';
 import 'package:cricker_app/themes/themeProvider.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,10 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: context.watch<ThemeDataProvider>().getTheme,
+      routes: {
+        '/about': (context) => AboutUs(),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }
