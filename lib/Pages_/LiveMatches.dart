@@ -12,7 +12,7 @@ class LiveMatches extends StatelessWidget {
 
   Future getLiveMatches() async {
     String api_host = "cricket-live-line1.p.rapidapi.com";
-    String api_key = "5e595fcbecmsha2cff63986a4013p1d42ccjsn3ea4adf348ad";
+    String api_key = "API_KEY";
 
     List<PlayerInfo> player = [];
 
